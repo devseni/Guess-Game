@@ -2,9 +2,9 @@
 
 let message = document.querySelector('.message');
 let scoreDisplay = document.querySelector('.score')
-let score = 10;
+let score = 5;
 let highScore = 0;
-let maxGuess = 30
+let maxGuess = 40
 let secretNumber = Math.trunc(Math.floor(Math.random() * maxGuess) + 1)
 
 //! ====================== HELPER FUNCTIONS ===========================
@@ -74,9 +74,8 @@ document.querySelector('.check').addEventListener('click', function () {
 
 
 document.querySelector('.again').addEventListener('click', function () {
-    console.log('clicked')
-    score = 10;
-    secretNumber = Math.trunc(Math.random() * 21)
+    score = 5;
+    secretNumber = Math.trunc(Math.floor(Math.random() * maxGuess) + 1)
     displayMessage('Start guessing...');
     scoreDisplay.textContent = score
     getElementAndUpdateText('.number', '?')
